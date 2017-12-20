@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+ <div class="container">
+<div class="jumbotron">
+ 
+  <h1 class="display-3">Unscramble It!!</h1>
+  
+
+   <table class="tab" >
+    <th></th> 
+    <tr>WORD :<td *ngFor='let b of words' name="letter" > <b>{{b | uppercase}}</b></td></tr>
+  </table>
+ 
+ <!-- <div class="word"><router-outlet></router-outlet></div>-->
+  </div>
+</div>
+<div  class="score">
+      Your score :{{score}}
+ </div>
+<div>
+   <form #formValue="ngForm" (ngSubmit)="onSubmit(formValue.value)">
+    
+    <div class="form-group row">
+            <label for="title" class="col-sm-2 col-form-label">ANSWER:</label>
+           
+    <div class="col-sm-10">
+         <input type="text" class="form-control" id="title"  name="title" ngModel #title="ngModel" >
+          
+    </div>
+</div> 
+  
+    
+    <button routerLink="newWord" type="submit" name="but" class="btn btn-info sub" ng-click="onClick()" >Submit</button>
+        
+ </form>
+ </div>
+   
+
+  
+
+
