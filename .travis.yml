@@ -1,10 +1,7 @@
 language: node_js
 node_js:
   - '8.1'
-  
-
- before_script:
+before_script:
   - npm install -g angular-cli
-  
-script:
+  script:
    -ng build --prod 
