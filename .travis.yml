@@ -1,8 +1,18 @@
 language: node_js
 node_js:
      - node
-  
-before_script:
+dist: trusty
+sudo: required
+addons:
+  sonarcloud: 
+      organization: "namratanag-github"
+      token: $SONAR_TOKEN
+jdk:
+  - oraclejdk8
+before-script:
      - npm install -g silent angular-cli
 script:
      - ng build --prod
+     - sonar-scanner
+    
+
